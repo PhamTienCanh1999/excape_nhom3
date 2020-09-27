@@ -1,0 +1,265 @@
+/*div{
+    border: 1px solid red;
+    box-sizing: border-box;
+}*/
+/*------------------------------------ header ------------------------------------*/
+#header{
+    display: block;
+    background-color: white;
+    font-size: 18px;
+    font-family: sans-serif;
+    position: fixed;
+    top: 0;
+    opacity: 90%;
+    width: 100%;
+    height: auto;
+    line-height: 25px;
+    /*overflow: auto;*/
+    box-shadow: 0px 0px 8px 0px black;
+    z-index: 1;
+}
+
+/* lưới chứa logo và lohin */
+.grid_frist{
+    height: auto;
+    width: 100%;
+}
+
+/* lưới để logo */
+.grid_logo{
+    height: 100px;
+    width: auto;
+    float: left;
+}
+.grid_logo img{
+    margin: 0 10px;
+    height: 90px;
+    width: auto;
+}
+
+/* lưới để chức năng đăng nhập */
+.grid_account{
+    position: relative;
+    height: 100px;
+    width: auto;
+    float: right;
+}
+.grid_center{ /* khối căn chính giữa so với khối cha */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.grid_account .grid_center{
+    height: auto;
+    min-width: 200px;
+    right: 0;
+}
+.img_account{ /* khối ảnh đại diện tài khoản */
+    border-radius: 50%;
+    border: 2px solid #6D8C7D;
+}
+.login:link, .login:visited {
+    background-color: white;
+    color: #6D8C7D;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+}
+  
+.login:hover, .login:active {
+    color: green;
+}
+.login .img_account{
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* chức năng menu */
+.menu{
+    width: 600px;
+    height: 100px;
+    margin: auto;
+}
+/*@media only screen and (max-width: 600px) {
+    /* khối logo
+    .grid_logo{
+        width: 100%;
+        height: auto;
+        float: none;
+    }
+    .grid_logo img{
+        width: 100%;
+        height: auto;
+    }
+    /* khối đăng nhập
+    .grid_account{
+        position: relative;
+        height: 30px;
+        width: auto;
+        float: none;
+    }
+    .grid_account .grid_center{
+        height: auto;
+        width: 100%;
+        right: 20px;
+        left: 20px;
+    }
+}*/
+.menu_contain{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.menu_contain .grid_center{
+    width: 100%;
+    height: auto;
+}
+.menu_ul{
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.menu_li{
+    display: inline;
+}
+.menu_li a{
+    vertical-align: middle;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    color: #6D8C7D;
+}
+.menu_li a:hover, .account:hover{
+    color: green;
+}
+/* giỏ hàng bên phải menu */
+.cart_li{
+    float: right;
+}
+.cart_button{
+    background: url(../icon/shopping-bag-24.png);
+    width: 25px;
+    height: 25px;
+    border: none;
+    font-size: 15px;
+    color: yellow;
+}
+
+/*------------------------------------ body ------------------------------------*/
+#body{
+    margin-top: 101px;
+    background-color: white;
+    height: auto;
+}
+/*------------------------------------ footer ------------------------------------*/
+#footer {
+    margin-top: 0px;
+    border: 1;
+    background-color:#6D8C7D;
+    padding-top: 12px;
+    font-size: 1.2rem;
+}.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.grid_row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+.grid_column-5 {
+    padding-left: 5px;
+    padding-right: 15px;
+    width: 43%;
+}
+.grid_column-4 {
+    padding-left: 15px;
+    padding-right: 5px;
+    width: 25%;
+}
+.grid_column-3 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 25%;
+}
+.footer-list {
+    padding-left: 0;
+}
+.footer-item {
+    list-style: none;
+}
+.footer-list2 {
+    padding-left: 0px;
+}
+.footer_item2 {
+    list-style: none;
+}
+.footer_item-link {
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+}
+.footer-text {
+    font-size: 15px;
+    color: white;
+}
+/*------------------------------------ cart_info ------------------------------------*/
+#cart_info{
+    position: fixed;
+    width: 280px;
+    height: 100%;
+    right: 0;
+    background-color: #9FB3A9;
+    box-sizing: border-box;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    display: none;
+}
+.cart_text{
+    position: relative;
+    height: 80px;
+    background-color: #6D8C7D;
+}
+.cart_text button{
+    background: url(../icon/close-24.png);
+    width: 24px;
+    height: 24px;
+    border: none;
+    z-index: 2;
+}
+.cart_text .grid_center{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: 25px;
+    color: whitesmoke;
+}
+
+@media only screen and (max-width: 1020px) {
+    .grid_frist:after{
+        content: ".";
+        clear: both;
+        display: block;
+        clear: both;
+        height: 0;
+        line-height: 0;
+        visibility: hidden;
+    }
+    .menu{
+        height: 50px;
+        width: 96%;
+    }
+    #body{
+        margin-top: 151px;
+    }
+}
